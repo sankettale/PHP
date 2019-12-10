@@ -170,5 +170,10 @@ while($res=mysqli_fetch_array($result)){
 
   </div>
 </div>
+<div class="container">
+<form action="excel.php" method="POST">
+  <input type="submit" name="export" class="btn btn-success" value="Export to Excel">
+</form>
+</div>
 </body>
 </html>

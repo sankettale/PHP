@@ -6,23 +6,6 @@ $fullname=$_POST['fullname'];
 $address=$_POST['address'];
 $mobile=$_POST['mobile'];
 $email=$_POST['email'];
-// $address = isset($_POST['address']) ? $_POST['address'] : '';
-// $mobile = isset($_POST['mobile']) ? $_POST['mobile'] : '';
-// $email= isset($_POST['email']) ? $_POST['email'] : '';
-
-// $insert= $insert='INSERT into `task2` ( `fullname`,`address`,`mobile`,`email`) values("'.$fullname.'","'.$address.'","'.$mobile.'","'.$email.'")';
-// echo print_r($insert);
-// $sql=mysqli_query($con,$insert);
-// if($sql)
-// {
-//  echo "Successful";
- 
-// }
-// else{ 
-//   echo 'Failed'.mysqli_error($con);
-
-// }
-// }
 
 $select='SELECT * from `task2` where `fullname` = "'.$fullname.'" && `address` = "'.$address.'" && `mobile` = "'.$mobile.'" && `email` ="'.$email.'" ';
 
@@ -34,7 +17,6 @@ if($num==1){
 }
 else{
 	$insert='INSERT INTO task2( `fullname`,`address`,`mobile`,`email`) VALUES("'.$fullname.'","'.$address.'","'.$mobile.'","'.$email.'")';
-	// echo print_r($insert);
 	$res=mysqli_query($con,$insert);
 	
 }
@@ -75,25 +57,25 @@ else{
                   	
                   	<div class="form-group">
                       <label for="name">Full Name:</label>
-                      <input type="text" class="form-control" id="fname1" name="fullname" required>
+                      <input type="text" class="form-control" id="fname1" name="fullname">
                       <h6 id="fnamecheck"> </h6>
                     </div>
 
                     <div class="form-group">
                       <label for="add">Address:</label>
-                      <input type="text" class="form-control" id="add" name="address"required>
+                      <input type="text" class="form-control" id="add" name="address">
                       <h6 id="addcheck"> </h6>
                     </div>
                   
                     <div class="form-group">
                       <label for="mob">Mobile No.:</label>
-                      <input type="number" class="form-control" id="mobile" name="mobile"required	>
+                      <input type="number" class="form-control" id="mobile" name="mobile">
                       <h6 id="mobcheck"> </h6>
                     </div>
                   
                     <div class="form-group">
                       <label for="email">Email address:</label>
-                      <input type="email" class="form-control" id="email" name="email" required>
+                      <input type="email" class="form-control" id="email" name="email">
                       <h6 id="mailcheck"> </h6>
                     </div>       
 
